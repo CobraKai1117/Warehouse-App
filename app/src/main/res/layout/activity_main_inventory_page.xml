@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainInventoryPage">
+
+    <ImageButton
+        android:id="@+id/deleteRow2"
+        android:layout_width="67dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventoryItem5"
+        app:layout_constraintTop_toTopOf="@+id/inventoryItem5"
+        app:srcCompat="@mipmap/red_x002"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/inventoryItem6"
+        android:layout_width="154dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editButton3"
+        app:srcCompat="@mipmap/oven002" />
+
+    <ImageButton
+        android:id="@+id/inventoryItem5"
+        android:layout_width="154dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/inventoryItem6"
+        app:layout_constraintTop_toTopOf="@+id/editButton2"
+        app:srcCompat="@mipmap/oven002" />
+
+    <Button
+        android:id="@+id/editButton3"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/teal_200"
+        android:text="Edit"
+        android:textColor="#004D40"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryItem4"
+        app:layout_constraintStart_toStartOf="@+id/inventoryItem4"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryItem4"
+        app:strokeColor="@color/black" />
+
+    <ImageButton
+        android:id="@+id/inventoryItem4"
+        android:layout_width="154dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryItem002"
+        app:srcCompat="@mipmap/oven002" />
+
+    <Button
+        android:id="@+id/editButton2"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:background="@color/teal_200"
+        android:text="Edit"
+        android:textColor="#004D40"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryItem003"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="@+id/inventoryItem003"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryItem003"
+        app:strokeColor="@color/black" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:background="@color/teal_200"
+        android:text="Edit"
+        android:textColor="#004D40"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryItem001"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/inventoryItem001"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryItem001"
+        app:strokeColor="@color/black" />
+
+    <ImageButton
+        android:id="@+id/inventoryItem003"
+        android:layout_width="154dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/inventoryItem4"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryItem001"
+        app:srcCompat="@mipmap/oven002" />
+
+    <ImageButton
+        android:id="@+id/deleteRow"
+        android:layout_width="67dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventoryItem001"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inventoryItem001"
+        app:srcCompat="@mipmap/red_x002" />
+
+    <ImageButton
+        android:id="@+id/inventoryItem001"
+        android:layout_width="154dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/inventoryItem002"
+        app:layout_constraintTop_toBottomOf="@+id/headerText"
+        app:srcCompat="@mipmap/oven002" />
+
+    <TextView
+        android:id="@+id/headerBackground"
+        android:layout_width="410dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/design_default_color_primary_variant"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="205dp"
+        android:layout_height="35dp"
+        android:text="@string/inventory_list"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/headerBackground"
+        app:layout_constraintTop_toTopOf="@+id/headerBackground" />
+
+    <GridView
+        android:id="@+id/inventoryGrid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="50dp"
+        android:numColumns="3"
+        android:verticalSpacing="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/headerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"></GridView>
+
+    <TextView
+        android:id="@+id/bottomFooter"
+        android:layout_width="420dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/design_default_color_primary_variant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/removeItemInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="@string/remove_item"
+        android:textSize="12.5sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addItemToInventory"
+        app:layout_constraintTop_toTopOf="@+id/bottomFooter"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <Button
+        android:id="@+id/addItemToInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="220dp"
+        android:text="@string/add_item"
+        app:layout_constraintBottom_toBottomOf="@+id/bottomFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="@+id/bottomFooter"
+        app:layout_constraintTop_toTopOf="@+id/bottomFooter" />
+
+    <ImageButton
+        android:id="@+id/inventoryItem002"
+        android:layout_width="139dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBackground"
+        app:srcCompat="@mipmap/oven002" />
+
+    <ImageButton
+        android:id="@+id/deleteRow002"
+        android:layout_width="67dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/inventoryItem003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/inventoryItem003"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@mipmap/red_x002" />
+
+    <Button
+        android:id="@+id/editButton001"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/teal_200"
+        android:text="Edit"
+        android:textColor="#004D40"
+        app:layout_constraintEnd_toEndOf="@+id/inventoryItem002"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toEndOf="@+id/editButton"
+        app:layout_constraintTop_toBottomOf="@+id/inventoryItem002"
+        app:strokeColor="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

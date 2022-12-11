@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Warehouse App</string>
+    <string name="login">Login</string>
+    <string name="inventory_list">Inventory List</string>
+    <string name="add_item">Add Item</string>
+    <string name="remove_item">Remove Item</string>
+</resources>
