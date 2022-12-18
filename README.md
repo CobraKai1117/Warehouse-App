@@ -4,10 +4,18 @@ The goal of the project was to develop an app that would allow users to perform 
 
 **What screens and features were necessary to support user needs and produce a user-centered UI for the app? How did your UI designs keep users in mind? Why were your designs successful?**
 
+For my app, I focused on simplicity and limited clutter. This mean a straightforward layout with few buttons. For example, to add an item the user would need to press the Add Item button however for updating and deleting the product they would just need to click on the product itself. Since the target market would be technically savy, having a simple UI that is easy to use is a great benefit to have. While I wish the UI design could have been more visually appealing, I would choose functionality over appearance. 
 
+**How did you approach the process of coding your app? What techniques or strategies did you use? How could those be applied in the future?**
 
-What screens and features were necessary to support user needs and produce a user-centered UI for the app? How did your UI designs keep users in mind? Why were your designs successful?
-How did you approach the process of coding your app? What techniques or strategies did you use? How could those be applied in the future?
-How did you test to ensure your code was functional? Why is this process important and what did it reveal?
-Considering the full app design and development process, from initial planning to finalization, where did you have to innovate to overcome a challenge?
-In what specific component from your mobile app were you particularly successful in demonstrating your knowledge, skills, and experience?
+Before starting the app, I had a target market chosen and also had a solid idea what features the app would support. I also had solid beta version of what I wanted for the app's UI. Having a solid plan and design allowed me to focus solely on writing the code and providing functionality for the app. It also prevented scope creep from occuring and kept me from getting sidetracked during the development process.
+
+**How did you test to ensure your code was functional? Why is this process important and what did it reveal?**
+This was my first app developed in Android Studio as well as mobile app. There was a tremendous learning curve involved and I spent a large amount of time testing out concepts and experimenting with parts of the code to see what worked and what didn't. During this process, testing was a huge help. To minimize potential errors, I would perform iterative testing. I would write small parts of code and then run tests against the program. If the program functioned properly, great, but if errors occurred I had a much easier time tracking down the source of the error making it easier to fix bugs.
+
+**Considering the full app design and development process, from initial planning to finalization, where did you have to innovate to overcome a challenge?**
+
+The part I struggled with the most was combining a GridView with CRUD functionality. Google and StackOverflow were of great help during this time. I would look at code from these sources which would give me an idea what components needed to be utilized in the app to support these features. Essentially I had to take ideas from different sources and find a way to seamlessly integrate them into my app. If something didn't quite work the way I wanted it, I had to find ways to tweak it to fit my app. For example, one source mentioned how I would need to utilize a longClickListener on my GridView to achieve what I wanted. however when I actually applied this listener, it didn't work as expected. I then realized I needed a clickListener instead of a longClickListener and my problem was solved.
+
+**In what specific component from your mobile app were you particularly successful in demonstrating your knowledge, skills, and experience?**
+While it slowed down the development process,I felt that I had done a good job with debugging my app and tracking down specific bugs through iterative testing. Given the circumstances and it being my first attempt at developing a mobile app with Android Studio, I felt I also did a good job finding the right resources to guide me in the right direction. I realized what took a large amount of time was not developing and building the app itself but figuring out what the proper component to use was the biggest hurdle to overcome. If I attempted to build this app again it would take me less time since I have both more experience and a better idea of what components I would need to use.    
