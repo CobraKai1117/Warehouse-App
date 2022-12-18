@@ -56,7 +56,7 @@ DatabaseManager(Context context)
 
     }
 
-    public void addEmployee(String firstName, String lastName, String jobTitle, String username, String password, String accessLevel)
+    public boolean addEmployee(String firstName, String lastName, String jobTitle, String username, String password, String accessLevel)
     {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -68,10 +68,10 @@ DatabaseManager(Context context)
         contentValues.put(COLUMN_PASSWORD,password);
         contentValues.put(ACCESS_LEVEL, accessLevel);
         //long rowInserted =
-        db.insert(TABLE_NAME,null,contentValues);
-       // if(rowInserted != -1)
-          //  Toast.makeText(this,"Data Successfully entered!" + " " + rowInserted, Toast.LENGTH_SHORT).show();
-        db.close();
+        long insertResult = db.insert(TABLE_NAME,null,contentValues);
+        if(insertResult == -1) {return false;}
+
+        else {return true;}
 
     }
 
@@ -79,6 +79,19 @@ DatabaseManager(Context context)
     {
         SQLiteDatabase db = getReadableDatabase();
         return db.rawQuery("SELECT * FROM " + TABLE_NAME,null);
+    }
+
+    boolean searchForEmployee(String UserName, String Password)
+    {
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE "+ COLUMN_USERNAME +" =? AND " + COLUMN_PASSWORD + " =?";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String[] whereArgs = {UserName,Password};
+        Cursor cursor = db.rawQuery(query,whereArgs);
+        int userCount = cursor.getCount();
+
+        if(userCount == 1) {return true;}
+
+        else{return false;}
     }
 
     boolean updateEmployee(int id, String firstName, String lastName, String title, String accessLevel)

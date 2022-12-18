@@ -4,4 +4,6 @@
     <string name="inventory_list">Inventory List</string>
     <string name="add_item">Add Item</string>
     <string name="remove_item">Remove Item</string>
+    <string name="add_inventory_item">Add Item</string>
+    <string name="remove_inventory_item">Remove Item</string>
 </resources>

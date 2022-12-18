@@ -3,12 +3,16 @@ package com.zybooks.warehouseapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AlertDialog;
 
+import android.content.Context;
 import android.database.DatabaseUtils;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 
 public class SignUp extends AppCompatActivity implements View.OnClickListener {
@@ -25,6 +29,10 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
     String userNameValue;
     String passwordValue;
     String accessLevel;
+    Context context;
+    CharSequence signUpMessage;
+    int duration;
+    boolean addSuccessful = false;
 
 
     @Override
@@ -38,6 +46,9 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         jobTitle = findViewById(R.id.jobTitleText);
         userName = findViewById(R.id.userNameText);
         password = findViewById(R.id.passwordTextValue);
+        context = getApplicationContext();
+        signUpMessage = "Account successfully created";
+        duration = Toast.LENGTH_SHORT;
 
     }
 
@@ -45,7 +56,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
 
     public void onClick(View view)
     {
-        Log.i("NumberGenerated","LYDIA IS WEIRD");
         DatabaseManager employeeDatabase = new DatabaseManager(SignUp.this);
         firstNameValue = firstName.getText().toString();
         lastNameValue = lastName.getText().toString();
@@ -53,9 +63,26 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         userNameValue = userName.getText().toString();
         passwordValue = password.getText().toString();
         boolean isManager = jobTitleValue.toLowerCase().contains("manager");
+
         if(isManager) {accessLevel = "3";} else {accessLevel = "1";}
-        employeeDatabase.addEmployee(firstNameValue,lastNameValue,jobTitleValue,userNameValue,passwordValue,accessLevel);
-        employeeDatabase.close();
+
+            addSuccessful = employeeDatabase.addEmployee(firstNameValue, lastNameValue, jobTitleValue, userNameValue, passwordValue, accessLevel);
+            //signUpMessage = "Account successfully created";
+        if(addSuccessful)
+        {
+            Toast toast = Toast.makeText(context, signUpMessage, duration);
+            toast.show();
+            this.finish();
+        }
+
+        else
+        {
+            signUpMessage = "Entry could not be added";
+            Toast toast = Toast.makeText(context,signUpMessage,duration);
+            toast.show();
+        }
+    }
+
+
 
     }
-}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomOptions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".mainInventoryPage">
+
+
+
+
+    <GridView
+        android:id="@+id/inventoryGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:horizontalSpacing="4dp"
+        android:numColumns="2"
+        android:verticalSpacing="4dp">
+
+    </GridView>
+
+    <Button
+        android:id="@+id/addInventoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#156507"
+        android:layout_marginTop="625dp"
+        android:layout_marginLeft="400dp"
+        android:layout_marginStart="140dp"
+        android:text="@string/add_inventory_item"></Button>
+
+
+    <androidx.appcompat.widget.Toolbar
+                android:id="@+id/bottomOptionsToolbar"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginTop="625dp"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toBottomOf="@id/inventoryGridView"
+                app:buttonGravity="bottom"
+                app:layout_constraintEnd_toEndOf="@id/inventoryGridView"
+                app:layout_constraintStart_toStartOf="@id/inventoryGridView" />
+
+     <!--   </LinearLayout> -->
+
+
+
+
+
+
+</RelativeLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout> -->
